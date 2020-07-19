@@ -4,7 +4,7 @@ https://svelte.dev/tutorial/slot-props
 -->
 
 <script>
-import Swipeable from './Swipable.svelte'
+import Swipeable from './Swipeable.svelte'
 import { onMount } from 'svelte'
 import {fade} from 'svelte/transition'
 import {quintOut} from 'svelte/easing'
@@ -99,44 +99,24 @@ function style(i, progress) {
 	transform: translateX(-50%) translateZ(-100px);
 	user-select: none;
 }
-	.cover {
-		height: 100%;
-		width: 100%;
-		position: absolute;
-		box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.6);
-	}
-	.img {
-		background-size: cover;
-		height: 100%;
-		width: 100%;
-	}
-	.img.reflection {
-		filter: blur(10px);
-		opacity: 0.2;
-		transform: scaleY(-1);
-		pointer-events: none;
-	}
-	.details {
-		position: absolute;
-		width: 100vw;
-		text-align: center;
+.cover {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.6);
+}
+.img {
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+.img.reflection {
+  filter: blur(10px);
+  opacity: 0.2;
+  transform: scaleY(-1);
+  pointer-events: none;
+}
 
-	}
-	.details img {
-		position: relative;
-		width: 100%;
-	}
-	.details .text {
-		position: absolute;
-		transform: scaleX(-1);
-		width: 100%;
-	}
-	button {
-		position: absolute;
-		
-		bottom: 40px;
-		transform: translateX(-50%);
-	}
 .gradient {
 	width: 100%;
 	height: 100%;
