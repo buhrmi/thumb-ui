@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "sapper dev",
     "build": "sapper build --legacy",
-    "export": "sapper export --legacy --basepath components && rm -rf ../docs && mv __sapper__/export ../docs",
+    "export": "sapper export --legacy --basepath components && rm -rf ../docs && mv __sapper__/export/components ../docs",
     "start": "node __sapper__/build",
     "cy:run": "cypress run",
     "cy:open": "cypress open",

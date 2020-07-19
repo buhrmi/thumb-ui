@@ -4,7 +4,7 @@ A collection of Svelte components.
 
 ## Coverflow
 
-![Coverflow Demo](https://github.com/buhrmi/components/blob/master/coverflow.gif?raw=true)
+![Coverflow Demo](https://github.com/buhrmi/components/blob/master/gifs/coverflow.gif?raw=true)
 
 [Demo](https://buhrmi.github.io/components/coverflow)
 
