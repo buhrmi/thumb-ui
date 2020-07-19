@@ -4,7 +4,7 @@ A collection of Svelte components.
 
 ## Swipeable
 
-Enables various touch-based interactions.
+Serves as a base to enable various touch-based interactions.
 
 ```html
 <script>
