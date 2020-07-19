@@ -1,4 +1,4 @@
-# Buhrmi's Components
+# Components
 
 A collection of Svelte components.
 
