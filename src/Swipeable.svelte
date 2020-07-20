@@ -1,11 +1,12 @@
 <script>
+import { onMount, tick, setContext } from 'svelte'
 import { tweened } from 'svelte/motion'
-import { cubicOut } from 'svelte/easing';
-import { onMount, tick } from 'svelte';
+import { cubicOut } from 'svelte/easing'
+import { writable } from 'svelte/store'
 
 export let current = 0
 export let direction = 'horizontal'
-export let numStates = 2
+export let numScreens = 0
 export let speed = 1
 
 let el
@@ -18,15 +19,21 @@ let jumpEnabled = true
 let clientHeight
 let clientWidth
 
-export const progress = tweened(current, {
+const progress = tweened(current, {
 	duration: 400,
 	easing: cubicOut
 })
 
+const context = writable({
+	jump,
+	progress,
+	numScreens
+})
+setContext('swipeable', context)
 
 $: current = Math.floor($progress+0.5)
 $: positionField = direction == 'vertical' ? 'pageY' : 'pageX'
-$: maxSlideIndex = numStates - 1
+$: maxSlideIndex = $context.numScreens - 1
 $: size = direction == 'vertical' ? clientHeight : clientWidth
 
 onMount(function() {
@@ -34,6 +41,7 @@ onMount(function() {
 })
 	
 function startMove(startPosition) {
+	draggedPixels = $progress * size
 	dragging = true
 	lastPosition = startPosition;
 }
@@ -47,10 +55,6 @@ function nextSlide() {
 }
 
 let nextSlideTimeout
-onMount(function() {
-	// draggedPixels = initial * size
-	// nextSlideTimeout = setTimeout(nextSlide, 10000)
-})
 
 function move(position) {
 	if (!dragging) return
@@ -92,6 +96,7 @@ function mouseup(e) {
 }
 
 function mousemove(e) {
+	console.log('dasd')
 	e.preventDefault()
 	if (stopTimeout) return // we just used the wheel
 	move(e[positionField])
@@ -115,21 +120,25 @@ function jump(i){
 	draggedPixels = i * size
 	$progress = i
 }
+
+function click(e) {
+  e.stopPropagation()
+}
 	
 function touchmove(e) {	
 	//e.preventDefault()
 	move(e.changedTouches[0][positionField])
 }
 	
-	let stopTimeout
-	function wheel(e) {
-		let delta = direction == 'vertical' ? -e.deltaY : -e.deltaX
-		if (delta != 0) e.preventDefault()
-		startMove(0)
-		move(delta)
-		clearTimeout(stopTimeout)
-		stopTimeout = setTimeout(stopMove, 100)
-	}
+let stopTimeout
+function wheel(e) {
+	let delta = direction == 'vertical' ? -e.deltaY : -e.deltaX
+	if (delta != 0) e.preventDefault()
+	startMove(0)
+	move(delta)
+	clearTimeout(stopTimeout)
+	stopTimeout = setTimeout(stopMove, 100)
+}
 
 </script>
 
@@ -143,6 +152,7 @@ function touchmove(e) {
 		 on:mousemove={mousemove} 
 		 on:mouseup={mouseup} 
 		 on:wheel={wheel}
+		 on:click={click}
 		 bind:this={el} 
 		 class="swipeable {direction}">
 	<slot {current} {jump} progress={$progress}></slot>

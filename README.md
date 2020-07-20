@@ -69,13 +69,16 @@ Serves as a base to enable various touch-based interactions.
 
 | Prop | Description | Example |
 | --- | --- | --- |
-| `numStates` | The number of states (i.e. different screens) that the user can swipe to. | "4" |
+| `numScreens` | The number of screens that the user can swipe to. This is optional and is set automatically when using the component together with "pluggable" components like `Cover` | "4" |
 | `speed` | How fast the progress changes relative to swipe speed | "4" |
 | `direction` | Swipe direction. Horizontal (default) or vertical | "horizontal" |
+| `current` | The index of the current screen | "horizontal" |
 
 
 
-## \<Coverflow>
+## \<Cover>
+
+A component that plugs into a `Swipeable` and presents its content in a Coverflow style.
 
 ![Coverflow Demo](https://github.com/buhrmi/components/blob/master/gifs/coverflow.gif?raw=true)
 
@@ -86,14 +89,50 @@ Serves as a base to enable various touch-based interactions.
 
 ```html
 <script>
-  import { Coverflow } from 'buhrmi'
+  import {Swipeable, Cover} from 'buhrmi'
+  let covers = [
+    {url: 'https://i.imgur.com/WSNVjAp.jpg', name: 'Lamborghini Veneno'},
+    {url: 'https://i.imgur.com/ktLr47i.jpg', name: 'Zenvo TS1'},
+    {url: 'https://i.imgur.com/IBPaYOH.jpg', name: 'McLaren P1 LM'},
+    {url: 'https://i.imgur.com/E97i8c8.jpg', name: 'LaFerrari FXX K'}
+  ]
+  let current = 3
 </script>
 
-<Coverflow {covers}/>
+<div class="container">
+  <Swipeable speed="3" bind:current>
+    {#each covers as cover}
+      <Cover>
+        <div class="img" style="background-image: url({cover.url})" />
+        <div class="img reflection" style="background-image:url({cover.url})" /> 
+      </Cover>
+    {/each}
+  </Swipeable>
+</div>
+
+<style>
+.container {
+  margin: 30px auto;
+  position: relative;
+  height: 280px;
+  width: 360px;
+  perspective: 800px;
+  transform-style: preserve-3d;
+  user-select: none;
+}
+.img {
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.6);
+}
+.img.reflection {
+  filter: blur(10px);
+  opacity: 0.2;
+  transform: scaleY(-1);
+  pointer-events: none;
+}
+</style>
 ```
 
-#### Props
-
-| Prop | Description | Example |
-| --- | --- | --- |
-| `covers` | An array containing the url and name of each cover.|`[{url: ..., name: ...}]` |
