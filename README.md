@@ -21,11 +21,10 @@ Provides a `fallback` slot to render if the resource can not be loaded.
 </Preload>
 ```
 
-## \<Lazy>
+## \<Lazy> ([REPL](https://svelte.dev/repl/9a37dc7103954474a32ec1ac3a587d26?version=3.24.0))
 
 ![Lazy Demo](https://github.com/buhrmi/components/blob/master/gifs/lazy.gif?raw=true)
 
-[Demo](https://buhrmi.github.io/components/lazy)
 
 Defers rendering of its content until the element scrolled into view. Takes [IntersectionObserver](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver) options as props.
 
@@ -76,13 +75,12 @@ Serves as a base to enable various touch-based interactions.
 
 
 
-## \<Cover>
+## \<Cover> [REPL](https://svelte.dev/repl/156d5bb34eb0457ea1906998389a4e9f?version=3.24.0)
 
 A component that plugs into a `Swipeable` and presents its content in a Coverflow style.
 
 ![Coverflow Demo](https://github.com/buhrmi/components/blob/master/gifs/coverflow.gif?raw=true)
 
-[Demo](https://buhrmi.github.io/components/coverflow)
 
 ### Usage
 
