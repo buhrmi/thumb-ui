@@ -28,6 +28,8 @@ Provides a `fallback` slot to render if the resource can not be loaded.
 
 Defers rendering of its content until the element scrolled into view. Takes [IntersectionObserver](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver) options as props.
 
+### Usage
+
 ```html
 <script>
   import {Lazy} from 'buhrmi'
@@ -42,6 +44,7 @@ Defers rendering of its content until the element scrolled into view. Takes [Int
 </Lazy>
 ```
 
+### Props
 
 | Prop | Description  |
 | --- | --- |
