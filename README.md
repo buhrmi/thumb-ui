@@ -3,7 +3,7 @@
 A collection of Svelte components.
 
 
-## Preload
+## \<Preload>
 
 Defers rendering of its content until a resource has been loaded into the browser cache.
 Provides a `fallback` slot to render if the resource can not be loaded.
@@ -21,7 +21,7 @@ Provides a `fallback` slot to render if the resource can not be loaded.
 </Preload>
 ```
 
-## Lazy
+## \<Lazy>
 
 ![Lazy Demo](https://github.com/buhrmi/components/blob/master/gifs/lazy.gif?raw=true)
 
@@ -51,7 +51,7 @@ Defers rendering of its content until the element scrolled into view. Takes [Int
 | `threshold` | Either a single number or an array of numbers which indicate at what percentage of the target's visibility the observer's callback should be executed. If you only want to detect when visibility passes the 50% mark, you can use a value of 0.5. If you want the callback to run every time visibility passes another 25%, you would specify the array [0, 0.25, 0.5, 0.75, 1]. The default is 0 (meaning as soon as even one pixel is visible, the callback will be run). A value of 1.0 means that the threshold isn't considered passed until every pixel is visible. | 1.0 |
 
 
-## Swipeable
+## \<Swipeable>
 
 Serves as a base to enable various touch-based interactions.
 
@@ -75,7 +75,7 @@ Serves as a base to enable various touch-based interactions.
 
 
 
-## Coverflow
+## \<Coverflow>
 
 ![Coverflow Demo](https://github.com/buhrmi/components/blob/master/gifs/coverflow.gif?raw=true)
 
