@@ -1,4 +1,5 @@
 import svelte from 'rollup-plugin-svelte';
+import image from '@rollup/plugin-image';
 import resolve from '@rollup/plugin-node-resolve';
 import pkg from './package.json';
 
@@ -14,6 +15,7 @@ export default {
 		{ file: pkg.main, 'format': 'umd', name }
 	],
 	plugins: [
+		image(),
 		svelte(),
 		resolve()
 	]

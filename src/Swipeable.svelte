@@ -19,12 +19,12 @@ let jumpEnabled = true
 let clientHeight
 let clientWidth
 
-const progress = tweened(current, {
+export const progress = tweened(current, {
 	duration: 400,
 	easing: cubicOut
 })
 
-const context = writable({
+export const context = writable({
 	jump,
 	progress,
 	numScreens
