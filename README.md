@@ -59,8 +59,8 @@ Serves as a base to enable various touch-based interactions.
   import { Swipeable } from 'buhrmi'
 </script>
 
-<Swipeable numStates="3" let:current let:progress>
-  Currently in state #{current}, with a total swipe progress of {progress}
+<Swipeable numScreens="3" let:current let:progress>
+  Currently on screen #{current}, with a total swipe progress of {progress}
 </Swipeable>
 ```
 
@@ -71,7 +71,7 @@ Serves as a base to enable various touch-based interactions.
 | `numScreens` | The number of screens that the user can swipe to. This is optional and is set automatically when using the component together with "pluggable" components like `Cover` | "4" |
 | `speed` | How fast the progress changes relative to swipe speed | "4" |
 | `direction` | Swipe direction. Horizontal (default) or vertical | "horizontal" |
-| `current` | The index of the current screen | "horizontal" |
+| `current` | The index of the current screen | "3" |
 
 
 
