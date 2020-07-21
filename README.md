@@ -2,6 +2,16 @@
 
 A collection of Svelte components.
 
+## Table of Contents
+
+- Standalone
+  - [Preload](#preload)
+  - [Lazy](#lazy-repl)
+  - [Carousel](#carousel-repl)
+- Swipeable
+  - [Swipeable](#swipeable)
+  - [Cover](#cover-repl)
+
 
 ## \<Preload>
 
