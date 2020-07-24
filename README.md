@@ -11,6 +11,7 @@ A collection of Svelte components.
 - Swipeable
   - [Swipeable](#swipeable)
   - [Cover](#cover-repl)
+  - [Controls](#cover-repl)
 
 
 ## \<Preload>
@@ -177,3 +178,16 @@ A component that plugs into a `Swipeable` and presents its content in a Coverflo
 </style>
 ```
 
+## \<Controls> [REPL](https://svelte.dev/repl/21e3078f26f94911be1d91452748b3a8?version=3.24.0)
+
+Adds navigation controls when plugged into a `Swipeable`.
+
+### Usage
+
+```html
+  <Swipeable>
+    ....
+
+    <Controls />
+  </Swipeable>
+```
