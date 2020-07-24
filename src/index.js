@@ -4,3 +4,4 @@ export { default as Swipeable } from './Swipeable.svelte';
 export { default as Preload } from './Preload.svelte';
 export { default as Lazy } from './Lazy.svelte';
 export { default as Carousel } from './Carousel.svelte';
+export { default as Controls } from './Controls.svelte';

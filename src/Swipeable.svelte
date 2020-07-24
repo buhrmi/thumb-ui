@@ -26,6 +26,8 @@ export const progress = tweened(current, {
 
 export const context = writable({
 	jump,
+	next,
+	prev,
 	progress,
 	numScreens
 })
@@ -47,14 +49,22 @@ function startMove(startPosition) {
 }
 
 
-function nextSlide() {
+function next(e) {
+	e.stopPropagation()
 	if (dragging) return
 	draggedPixels += size
-	if (draggedPixels < maxSlideIndex * size) draggedPixels = 0
-	nextSlideTimeout = setTimeout(nextSlide, 10000)
+  $progress = (draggedPixels / size) || 0
+	// if (draggedPixels < maxSlideIndex * size) draggedPixels = 0
 }
 
-let nextSlideTimeout
+function prev(e) {
+	e.stopPropagation()
+	if (dragging) return
+	draggedPixels -= size
+	$progress = (draggedPixels / size) || 0
+	// if (draggedPixels > 0) draggedPixels = 0
+}
+
 
 function move(position) {
 	if (!dragging) return
@@ -96,7 +106,6 @@ function mouseup(e) {
 }
 
 function mousemove(e) {
-	console.log('dasd')
 	e.preventDefault()
 	if (stopTimeout) return // we just used the wheel
 	move(e[positionField])
