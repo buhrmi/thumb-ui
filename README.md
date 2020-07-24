@@ -9,9 +9,9 @@ The goal of this component library is to make it easy to create mind-blowing use
 - Components
   - Interactions
     - [Swipeable](#swipeable)
-    - [Screen](#screen-repl)
-    - [Cover](#cover-repl)
-    - [Controls](#controls-repl)
+    - [Screen](#screen)
+    - [Cover](#cover)
+    - [Controls](#controls)
   - Utilities
     - [Preload](#preload)
     - [Lazy](#lazy-repl)
@@ -43,81 +43,25 @@ Serves as a base to enable various touch-based interactions.
 | `direction` | Swipe direction. Horizontal (default) or vertical | "horizontal" |
 | `current` | The index of the current screen | "3" |
 
+## \<Screen>
 
+A very simple component that plugs into a `Swipeable`. Allows the user to swipe between different screens.
 
-## \<Cover> [REPL](https://svelte.dev/repl/156d5bb34eb0457ea1906998389a4e9f?version=3.24.0)
+See [Carousel](https://github.com/buhrmi/components#carousel-repl) for a usage example.
+
+## \<Cover>
 
 A component that plugs into a `Swipeable` and presents its content in a Coverflow style.
 
 ![Coverflow Demo](https://github.com/buhrmi/components/blob/master/gifs/coverflow.gif?raw=true)
 
+See [Coverflow](https://github.com/buhrmi/components#coverflow-repl) for a usage example.
 
-### Usage
+## \<Controls>
 
+Plug it into a `Swipeable` to add navigation controls.
 
-```html
-<script>
-  import {Swipeable, Cover} from 'buhrmi'
-  let covers = [
-    {url: 'https://i.imgur.com/WSNVjAp.jpg', name: 'Lamborghini Veneno'},
-    {url: 'https://i.imgur.com/ktLr47i.jpg', name: 'Zenvo TS1'},
-    {url: 'https://i.imgur.com/IBPaYOH.jpg', name: 'McLaren P1 LM'},
-    {url: 'https://i.imgur.com/E97i8c8.jpg', name: 'LaFerrari FXX K'}
-  ]
-  let current = 3
-</script>
-
-<div class="container">
-  <Swipeable speed="3" bind:current>
-    {#each covers as cover}
-      <Cover>
-        <div class="img" style="background-image: url({cover.url})" />
-        <div class="img reflection" style="background-image:url({cover.url})" /> 
-      </Cover>
-    {/each}
-  </Swipeable>
-</div>
-
-<style>
-.container {
-  margin: 30px auto;
-  position: relative;
-  height: 280px;
-  width: 360px;
-  perspective: 800px;
-  transform-style: preserve-3d;
-  user-select: none;
-}
-.img {
-  background-size: cover;
-  background-position: center;
-  height: 100%;
-  width: 100%;
-  box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.6);
-}
-.img.reflection {
-  filter: blur(10px);
-  opacity: 0.2;
-  transform: scaleY(-1);
-  pointer-events: none;
-}
-</style>
-```
-
-## \<Controls> [REPL](https://svelte.dev/repl/21e3078f26f94911be1d91452748b3a8?version=3.24.0)
-
-Adds navigation controls when plugged into a `Swipeable`.
-
-### Usage
-
-```html
-  <Swipeable>
-    ....
-
-    <Controls />
-  </Swipeable>
-```
-
+See [Carousel](https://github.com/buhrmi/components#carousel-repl) for a usage example.
 
 ## \<Preload>
 
