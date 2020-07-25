@@ -4,8 +4,6 @@ A collection of Svelte components for thumb-driven web UIs.
 
 ![Example](https://github.com/buhrmi/components/blob/master/gifs/example.gif?raw=true)
 
-The goal of this component library is to make it easy to create mind-blowing user interfaces for the mobile web.
-
 ## Table of Contents
 
 - Components
