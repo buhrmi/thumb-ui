@@ -49,16 +49,16 @@ function startMove(startPosition) {
 }
 
 
-function next(e) {
-	e.stopPropagation()
+export function next(e) {
+	if (e) e.stopPropagation()
 	if (dragging) return
 	draggedPixels += size
   $progress = (draggedPixels / size) || 0
 	// if (draggedPixels < maxSlideIndex * size) draggedPixels = 0
 }
 
-function prev(e) {
-	e.stopPropagation()
+export function prev(e) {
+	if (e) e.stopPropagation()
 	if (dragging) return
 	draggedPixels -= size
 	$progress = (draggedPixels / size) || 0
@@ -124,7 +124,7 @@ function pointercancel(e) {
 	dragging = false
 }
 	
-function jump(i){
+export function jump(i){
 	if (!jumpEnabled) return
 	draggedPixels = i * size
 	$progress = i
@@ -171,12 +171,11 @@ function wheel(e) {
 .swipeable {
 	width: 100%;
 	height: 100%;
-	position: absolute;
 }
-	.horizontal {
-		touch-action: pan-y;
-	}
-	.vertical {
-		touch-action: pan-x;
-	}
+.horizontal {
+	touch-action: pan-y;
+}
+.vertical {
+	touch-action: pan-x;
+}
 </style>
