@@ -16,9 +16,9 @@ A collection of Svelte components for thumb-driven web UIs.
     - [Preload](#preload)
     - [Lazy](#lazy-repl)
 - Examples
-  - [Custom Transitions](#custom-repl)
   - [Carousel](#carousel-repl)
   - [Coverflow](#coverflow-repl)
+  - [Custom Transitions](#custom-transitions-repl)
     
 
 ## \<Swipeable>
