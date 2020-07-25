@@ -2,6 +2,8 @@
 
 A collection of Svelte components for thumb-driven web UIs.
 
+![Example](https://github.com/buhrmi/components/blob/master/gifs/example.gif?raw=true)
+
 The goal of this component library is to make it easy to create mind-blowing user interfaces for the mobile web.
 
 ## Table of Contents
@@ -16,6 +18,7 @@ The goal of this component library is to make it easy to create mind-blowing use
     - [Preload](#preload)
     - [Lazy](#lazy-repl)
 - Examples
+  - [Custom Transitions](#custom-repl)
   - [Carousel](#carousel-repl)
   - [Coverflow](#coverflow-repl)
     
@@ -126,3 +129,8 @@ Demonstrates how you can build a Coverflow UI using `Swipeable` and `Cover`.
 
 ![Coverflow Demo](https://github.com/buhrmi/components/blob/master/gifs/coverflow.gif?raw=true)
 
+### Custom Transitions [REPL](https://svelte.dev/repl/9116699f10ac42668e7b58d120c4bc8c?version=3.18.1)
+
+Demonstrates using only the Swipeable component and its "raw" bindings to create custom transitions.
+
+![Example](https://github.com/buhrmi/components/blob/master/gifs/example.gif?raw=true)
