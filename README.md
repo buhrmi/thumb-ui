@@ -87,7 +87,7 @@ Provides a `fallback` slot to render if the resource can not be loaded.
 ![Lazy Demo](https://github.com/buhrmi/components/blob/master/gifs/lazy.gif?raw=true)
 
 
-Defers rendering of its content until the element scrolled into view. Takes [IntersectionObserver](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver) options as props.
+Delays rendering of its content until the element scrolled into view. Takes [IntersectionObserver](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver) options as props.
 
 ### Usage
 
