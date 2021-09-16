@@ -27,7 +27,7 @@ Serves as a base to enable various touch-based interactions.
 
 ```html
 <script>
-  import { Swipeable } from 'buhrmi'
+  import { Swipeable } from 'thumb-ui'
 </script>
 
 <Swipeable numScreens="3" let:current let:progress>
@@ -73,7 +73,7 @@ Provides a `fallback` slot to render if the resource can not be loaded.
 
 ```html
 <script>
-  import {Preload} from 'buhrmi'
+  import {Preload} from 'thumb-ui'
 </script>
 
 <Preload url="https://i.imgur.com/E97i8c8.jpg" let:src>
@@ -93,8 +93,8 @@ Delays rendering of its content until the element scrolled into view. Takes [Int
 
 ```html
 <script>
-  import {Lazy} from 'buhrmi'
-  import {Preload} from 'buhrmi'
+  import {Lazy} from 'thumb-ui'
+  import {Preload} from 'thumb-ui'
   import {fly} from 'svelte/transition'
 </script>
 
