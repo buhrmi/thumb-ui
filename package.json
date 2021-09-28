@@ -1,5 +1,5 @@
 {
-  "name": "buhrmi",
+  "name": "thumb-ui",
   "svelte": "src/index.js",
   "module": "dist/index.mjs",
   "main": "dist/index.js",
