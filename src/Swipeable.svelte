@@ -6,7 +6,7 @@ import { writable } from 'svelte/store'
 
 export let current = 0
 export let direction = 'horizontal'
-export let numScreens = 2
+export let numScreens = 0
 export let speed = 1
 
 let el
