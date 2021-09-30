@@ -48,7 +48,7 @@ Serves as a base to enable various touch-based interactions.
 
 A very simple component that plugs into a `Swipeable`. Allows the user to swipe between different screens.
 
-See [Carousel](https://github.com/buhrmi/components#carousel-repl) for a usage example.
+[Example REPL](https://svelte.dev/repl/1af75faf851949a8a1a6978f144034e0?version=3.24.0)
 
 ## \<Cover>
 
@@ -56,13 +56,13 @@ A component that plugs into a `Swipeable` and presents its content in a Coverflo
 
 ![Coverflow Demo](https://github.com/buhrmi/components/blob/master/gifs/coverflow.gif?raw=true)
 
-See [Coverflow](https://github.com/buhrmi/components#coverflow-repl) for a usage example.
+[Example REPL](https://svelte.dev/repl/156d5bb34eb0457ea1906998389a4e9f?version=3.24.0)
 
 ## \<Controls>
 
 Plug it into a `Swipeable` to add navigation controls.
 
-See [Carousel](https://github.com/buhrmi/components#carousel-repl) for a usage example.
+[Example REPL](https://svelte.dev/repl/1af75faf851949a8a1a6978f144034e0?version=3.24.0)
 
 ## \<Preload>
 
