@@ -2,7 +2,7 @@
 
 A collection of Svelte components for thumb-driven web UIs.
 
-This library is very experimental and I don't actually recommend using this for more than experimenting with Svelte.
+This library is very experimental and not actually recommended for anything more than experimenting with Svelte.
 
 ![Example](https://github.com/buhrmi/components/blob/master/gifs/example.gif?raw=true)
 
