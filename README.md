@@ -1,5 +1,7 @@
 # Thumb UI
 
+> Thumb UI 2.0 is in development and will be based on [Inertia X](https://github.com/buhrmi/inertia).
+
 A collection of Svelte components for thumb-driven web UIs.
 
 This library is very experimental and not actually recommended for anything more than experimenting with Svelte.
